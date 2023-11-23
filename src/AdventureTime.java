@@ -51,12 +51,12 @@ public class AdventureTime {
         int count = 0;
         int[] arr2 = readFile(fileName);
         int end = arr2.length%3;
-        for(int i = 2; i<arr2.length-end-2; i++)
+        for(int i = 0; i<arr2.length-end-2; i++)
         {
-            int sum = arr2[i+1] + arr2[i+2] + arr2[i+3];
-            int sum2 = arr2[i] + arr2[i-1] + arr2[i-2];
+            int sum = arr2[i] + arr2[i+1] + arr2[i+2];
+            int sum2 = arr2[i+1] + arr2[i+2] + arr2[i+3];
 
-            if(sum > sum2)
+            if(sum2 > sum)
             {
                 count++;
             }
